@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>회원가입</title>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="signin.css" rel="stylesheet">
+
+<!-- 카카오톡 -->
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+		
+	<div class="container">
+		<form action="JSP/chap04/Agreement.jsp" method="post" class="form-signin">
+			<h2 class="form-signin-heading">개인정보를 입력하세요.</h2>
+			<label for="inputID" class="sr-only">ID</label> 
+			<input type="text" id="inputID" name="ID" class="form-control" placeholder="ID" required autofocus> 
+			<label for="inputPassword" class="sr-only">Password</label> 
+			<input type="password" id="inputPassword" name="PASSWORD" class="form-control" placeholder="Password" required> 
+			<label for="inputPassword" class="sr-only">이름</label> 
+			<input type="text" id="inputName" name="NAME" class="form-control" placeholder="Name" required>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">확인</button>
+		</form>
+
+	</div>
+
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	<a id="kakao-login-btn"></a>
+	<a href="http://developers.kakao.com/logout"></a>
+	<script type='text/javascript'>
+ 	 //<![CDATA[
+	    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    	Kakao.init('8004da49647d8cbae77b8361edf88acb');
+	    // 카카오 로그인 버튼을 생성합니다.
+    	Kakao.Auth.createLoginButton({
+ 	     container: '#kakao-login-btn',
+    	  success: function(authObj) {
+	        //alert(JSON.stringify(authObj));
+	        alert("로그인 되었습니다.");
+	        location.href = "Agreement.jsp";
+    	  },
+	      fail: function(err) {
+    	     alert(JSON.stringify(err));
+ 	     }
+    	});
+	  //]]>
+	</script>
+	
+</body>
+</html>
