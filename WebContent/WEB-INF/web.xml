@@ -149,7 +149,7 @@
 		<servlet-name>DBName</servlet-name>
 		<url-pattern>/chap06/dbname</url-pattern>
 	</servlet-mapping>
-	
+
 
 	<servlet>
 		<servlet-name>chap08_391</servlet-name>
@@ -171,4 +171,10 @@
 		<param-name>TOOL_NAME</param-name>
 		<param-value>Eclipse</param-value>
 	</context-param>
+
+	<servlet>
+		<servlet-name>auto-create-db-pool-jsp</servlet-name>
+		<jsp-file>/AutoCreateDBPool.jsp</jsp-file>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 </web-app>

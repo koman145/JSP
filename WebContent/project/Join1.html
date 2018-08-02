@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bootstrap template</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.min.css" media="screen"
+	title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/style.css" media="screen"
+	title="no title" charset="utf-8">
+
+</head>
+<body>
+	<script type="text/javascript">
+  	Random key = new Random(System.currentTimeMillis());
+	int result = (int) Math.abs(key.nextInt(899999) + 100000);
+	String code = String.valueOf(result);
+	String phoneNumber = request.getParameter("phoneNumber");
+  </script>
+
+	<article>
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>본인인증</h1>
+			</div>
+			<form action="Send.jsp" class="form-horizontal" method="post">
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="inputName">이름</label>
+					<div class="col-sm-6">
+						<input class="form-control" id="inputName" type="text"
+							placeholder="이름">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label" for="inputNumber">휴대폰번호</label>
+					<div class="col-sm-6">
+						<input type="tel" class="form-control" id="inputName"
+							name="phoneNumber" placeholder="- 없이 입력해 주세요" />
+					</div>
+
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12 text-center">
+						<button class="btn btn-primary" type="submit">
+							인증번호 전송<i class="fa fa-check spaceLeft"></i>
+						</button>
+						<button class="btn btn-danger" type="submit">
+							가입취소<i class="fa fa-times spaceLeft"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+			<hr>
+		</div>
+	</article>
+
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
