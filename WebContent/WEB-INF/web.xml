@@ -177,4 +177,20 @@
 		<jsp-file>/AutoCreateDBPool.jsp</jsp-file>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/CommonError.jsp</location>
+	</error-page>
+	
+	<servlet>
+		<servlet-name>bbs-list-servlet</servlet-name>
+		<servlet-class>chap13.BBSListServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>bbs-list-servlet</servlet-name>
+		<url-pattern>/chap13/bbs-list</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

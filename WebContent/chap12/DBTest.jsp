@@ -20,8 +20,7 @@
 			out.println("webdb 데이터베이스로 연결했습니다. <br/>");
 			conn.close();
 			out.println("webdb 데이터베이스로의 연결을 끊었습니다. <br/>");
-		}
-		else {
+		} else {
 			out.println("webdb 데이터베이스로 연결할 수 없습니다. <br/>");
 		}
 	%>

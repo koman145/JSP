@@ -29,25 +29,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<script type="text/javascript">
-	function chk() {
-		var req1 = document.form.req1.checked;
-		var req2 = document.form.req2.checked;
-		var num = 0;
-		if (req1 == true && req2 == true) {
-			num = 1;
-		}
-		if (num == 1) {
-			document.form.submit();
-		} else {
-			alert("개인정보 약관에 동의하셔야 합니다.");
-		}
-	}
-	function nochk() {
-		alert("동의하지 않으면 가입하실 수 없습니다");
-		location.href = "../index.jsp";
-	}
-</script>
+
 <body>
 
 	<div class="site-wrapper">
@@ -55,6 +37,7 @@
 			<div class="cover-container">
 				<div class="masthead clearfix">
 					<div class="inner">
+						<h3 class="masthead-brand">Log-In</h3>
 						<nav>
 							<ul class="nav masthead-nav">
 								<li class="active"><a href="Cover.html">Home</a></li>
@@ -64,72 +47,36 @@
 								<li><a href="Login.html">Log-In</a></li>
 							</ul>
 						</nav>
-						<div class="page-header" align="left">
-							<h3>
-								이용약관<small>@@@</small>
-							</h3>
-						</div>
 					</div>
 				</div>
 
 				<div class="inner cover">
-					<br /> <br /> <br /> <br /> <br />
-					<form action="resistration.html" name="form" method="post">
-						<div style="text-align: center">
-							<p class="help-block">회원가입을 위해서는 아래 약관 및 안내를 읽고 동의해 주시기 바랍니다.</p>
+					<form action="" method="post" class="form-signin">
+						<h2 class="form-signin-heading"></h2>
+						<label for="inputID" class="sr-only">Email address</label> <input type="email"
+							id="inputID" name="ID" class="form-control" placeholder="ID"
+							required autofocus> <label for="inputPassword"
+							class="sr-only">Password</label> <input type="password"
+							id="inputPassword" name="PASSWORD" class="form-control"
+							placeholder="Password" required>
+						<div class="checkbox" align="left">
+							<label> <input type="checkbox" value="remember-me"
+								checked>Remember me
+							</label>
 						</div>
-						<div class="container" align="left">
-							<h3>
-								회원 약관<small>(필수)</small>
-							</h3>
-							<textarea cols="100" rows="2" style="resize: none; color: black"
-								disable>gggggggggggggggggggggggggggggggggggg</textarea>
-							<div class="checkbox">
-								<label> <input type="checkbox" name="req1">회원 약관
-									동의
-								</label>
-							</div>
-						</div>
-						<div class="container" align="left">
-							<h3>
-								개인정보 수집 및 이용 동의<small>(필수)</small>
-							</h3>
-							<textarea cols="100" rows="2" style="resize: none; color: black"
-								disable>ㅋㅋㅋㅋ</textarea>
-							<div class="checkbox">
-								<label> <input type="checkbox" name="req2">개인정보
-									수집 및 이용 동의
-								</label>
-							</div>
-						</div>
-						<div class="container" align="left">
-							<h3>
-								마케팅/홍보의 수집 및 이용 동의<small>(선택)</small>
-							</h3>
-							<textarea cols="100" rows="2" style="resize: none; color: black"
-								disable>ㅋㅋㅋㅋ</textarea>
-							<div class="checkbox">
-								<label> <input type="checkbox" value="remember-me">마케팅/홍보의
-									수집 및 이용 동의
-								</label>
-							</div>
-							<br /> <br />
-						</div>
-						<div class="inner cover">
-							<p class="lead">
-								<a type="submit" href="#" class="btn btn-lg btn-default"
-									onclick=" chk(); return false;">Next</a>
-							</p>
-						</div>
+						<button class="btn btn-lg btn-default btn-block" type="submit">LogIn</button>
+						<button class="btn btn-lg btn-warning btn-block" type="submit"
+							onclick="location.href='Agreement.html' ">Join</button>
 					</form>
 				</div>
 
-
 				<div class="mastfoot">
-					<p>
-						Made by <a href="https://www.instagram.com/j_haaaaaaa/?hl=ko">KJH</a>,
+					<div class="inner">
+						<p>
+							Made by <a href="https://www.instagram.com/j_haaaaaaa/?hl=ko">KJH</a>,
 							Question to <a href="mailto:swi00417@naver.com">KJH</a>.
-					</p>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
